@@ -108,6 +108,33 @@ $ej2 = "Promedio: " . number_format($promedio, 2)
 
 // ---------- EJERCICIO 3 · Día de la semana (switch) ----------
 // TODO 3
+switch ($dia) {
+    case 1 : $nombreDia = "Lunes"; break;
+    case 2 : $nombreDia = "Martes"; break;
+    case 3 : $nombreDia = "Miercoles"; break;
+    case 4 : $nombreDia = "Jueves"; break;
+    case 5 : $nombreDia = "Viernes"; break;
+    case 6 : $nombreDia = "Sabado"; break;
+    case 7 : $nombreDia = "Domingo"; break;
+    default : $nombreDia = "Dia no valido"; 
+}
+switch ($dia) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        $tipoDia = "LAboral";
+        break;
+    case 6:
+    case 7:
+        $tipoDia = "Fin de semana";
+        break;
+    default : 
+           $tipoDia = "Invalido";
+}
+
+$ej3 = "Dia: $nombreDia | Tipo: $tipoDia";
 
 // ---------- EJERCICIO 4 · Mes y estación (match) ----------
 // TODO 4
