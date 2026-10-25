@@ -58,6 +58,53 @@ $ej1 = "Categoria: $categoria | Precio final: B/. " . number_format($precio, 2)
 
 // ---------- EJERCICIO 2 · Notas (elseif, ternario, &&) ----------
 // TODO 2
+define('PRECIO_NINO', 3.00);
+define('PRECIO_JOVEN', 4.50);
+define('PRECIO_ADULTO', 7.00);
+define('PRECIO_JUBILADO', 3.50);
+
+if ($edad <12) {
+    $categoria = "Niño";
+    $precio = PRECIO_NINO;
+}elseif ($edad <= 17 ) {
+    $categoria = "Joven";
+    $precio = PRECIO_JOVEN; 
+}elseif ($edad <= 59) {
+    $categoria = "Adulto";
+    $precio = PRECIO_ADULTO;
+}else {
+    $categoria = "Jubilados";
+    $precio = PRECIO_JUBILADO;
+}
+
+$descuentoMiercoles = ($dia ==3);
+if ($descuentoMiercoles) {
+    $precio = $precio * 0.5;
+}
+$ej1 = "Categoria: $categoria | Precio final: B/. " . number_format($precio, 2)
+       ." | Miercoles 50%: " . ($descuentoMiercoles ? "SI" : "NO");
+
+// ---------- EJERCICIO 2 · Notas (elseif, ternario, &&) ----------
+// TODO 2
+$promedio = ($nota1 + $nota2 + $nota3) / 3;
+
+if ($promedio >=90) {
+    $letra= "A";
+}elseif ($promedio >= 80) {
+    $letra= "B";
+}elseif ($promedio >= 70) {
+    $letra= "C";
+}elseif ($promedio >= 60) {
+    $letra= "D";
+}else {
+    $letra = "F";
+}   
+
+$estado = ($promedio >= 70) ? "Aprobado :'))" : "Reprobado :'(";
+$honor = ($promedio >= 90 && $nota1 >= 80 && $nota2 >= 80 && $nota3 >= 80) ? "SI" : "NO";
+
+$ej2 = "Promedio: " . number_format($promedio, 2)
+     ." | Letra: $letra | Estado: $estado | Cuadro de honor: $honor";
 
 // ---------- EJERCICIO 3 · Día de la semana (switch) ----------
 // TODO 3
