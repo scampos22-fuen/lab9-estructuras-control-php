@@ -162,6 +162,29 @@ $ej4 = "Mes: $nombreMes | Estacion: $estacion";
 
 // ---------- EJERCICIO 5 · Caja de la tienda (reto integrador) ----------
 // TODO 5
+define('ITBMS', 0.07);
+
+if ($monto >= 150) {
+    $pct = 15;
+}elseif ($monto >= 100) {
+    $pct = 10;
+}elseif ($monto >= 50) {
+    $pct = 5;
+}else {
+    $pct = 0;
+}
+
+if ($esMiembro) {
+    $pct += 5;
+}
+$base = $monto - ($monto * $pct / 100);
+$recargoNocturno = false;
+if ($hora >= 22 || $hora < 0) {
+    $recargoNocturno = true;
+    $base = $base + ($base * 0.03);
+}
+$total = $base + ($base * ITBMS);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
