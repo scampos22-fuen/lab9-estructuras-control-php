@@ -192,6 +192,7 @@ $total = $base + ($base * ITBMS);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- TODO 0.3: <meta name="lab9-huella" content="..."> con el valor de $huella -->
+  <meta name="lab9-huella" content="<?= $huella ?>">
   <title>Lab 9 · Estructuras de control</title>
   <!-- TODO CSS-1: enlaza css/estilos.css (CSS externo) -->
 <link rel="stylesheet" herf="css/estilos.css">
@@ -225,7 +226,7 @@ $total = $base + ($base * ITBMS);
 
     <section id="ej1">
       <h2>Ejercicio 1 · Boleto de cine</h2>
-      <p id="ej1-res"><!-- TODO 1 --></p>
+      <p id="ej1-res"><? $ej1 ?></p>
     </section>
 
     <section id="ej2">
@@ -236,24 +237,24 @@ $total = $base + ($base * ITBMS);
 
     <section id="ej3">
       <h2>Ejercicio 3 · Día de la semana</h2>
-      <p id="ej3-res"><!-- TODO 3 --></p>
+      <p id="ej3-res"><? $ej3 ?></p>
     </section>
 
     <section id="ej4">
       <h2>Ejercicio 4 · Mes y estación</h2>
-      <p id="ej4-res"><!-- TODO 4 --></p>
+      <p id="ej4-res"><? $ej4 ?></p>
     </section>
 
     <section id="ej5">
       <h2>Ejercicio 5 · Caja de la tienda</h2>
-      <p id="ej5-monto"><!-- TODO 5 --></p>
-      <p id="ej5-descuento"><!-- TODO 5 --></p>
-      <p id="ej5-recargo"><!-- TODO 5 --></p>
-      <p id="ej5-total"><!-- TODO 5 --></p>
+      <p id="ej5-monto">Montode compra: B/. <?= number_format($monto,2) ?></p>
+      <p id="ej5-descuento">Descuento aplicado: <?= $pct ?>%</p>
+      <p id="ej5-recargo">Recargo nocturno: <?= $recargoNocturno ? "SI" : "NO" ?></p>
+      <p id="ej5-total">Total a pagar: B/. <?= number_format($total, 2) ?></p>
     </section>
 
   </main>
 
-  <footer id="firma"><!-- TODO 0.7: "Lab 9 · Nombre Apellido · Semilla N" --></footer>
+  <footer id="firma">Lab 9 · <?= $nombreCompleto ?> · Semilla <?= SEMILLA ?></footer>
 </body>
 </html>
