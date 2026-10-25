@@ -194,12 +194,17 @@ $total = $base + ($base * ITBMS);
   <!-- TODO 0.3: <meta name="lab9-huella" content="..."> con el valor de $huella -->
   <title>Lab 9 · Estructuras de control</title>
   <!-- TODO CSS-1: enlaza css/estilos.css (CSS externo) -->
+<link rel="stylesheet" herf="css/estilos.css">
   <!-- TODO CSS-2: agrega un <style> interno con al menos 2 reglas -->
+<style>
+    h2 { color: green; }
+    #autor { font-style: italic; }
+    </style>
 </head>
 <body>
   <header>
     <!-- TODO CSS-3: agrega un atributo style (CSS en línea) a este h1 -->
-    <h1>Laboratorio #9 · Estructuras de control</h1>
+    <h1 style="color: #ffd966;>Laboratorio #9 · Estructuras de control</h1>
     <p id="autor"><!-- TODO 0.4: "Autor: Nombre Apellido" --></p>
   </header>
 
@@ -226,7 +231,7 @@ $total = $base + ($base * ITBMS);
     <section id="ej2">
       <h2>Ejercicio 2 · Notas</h2>
       <!-- TODO CSS-4: agrega la clase "ok" o "error" con PHP según el estado -->
-      <p id="ej2-res" class="resultado"><!-- TODO 2 --></p>
+      <p id="ej2-res" class="resultado"<?= $clase ?>"><?= $ej2 ?>/p>
     </section>
 
     <section id="ej3">
